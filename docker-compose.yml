@@ -12,6 +12,9 @@ services:
     depends_on:
       - db
     restart: always
+    networks:
+      - default
+      - reverse-proxy-server_default
 
   db:
     image: mariadb:10.11
@@ -25,6 +28,12 @@ services:
       - db_data:/var/lib/mysql
       - ./database.sql:/docker-entrypoint-initdb.d/init.sql
     restart: always
+    networks:
+      - default
 
 volumes:
   db_data:
+
+networks:
+  reverse-proxy-server_default:
+    external: true
