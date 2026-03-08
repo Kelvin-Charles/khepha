@@ -5,7 +5,7 @@ services:
     build: .
     container_name: oit237_web
     ports:
-      - "9098:80"
+      - "0.0.0.0:9098:80"
     environment:
       - DB_HOST=db
       - DB_USER=root
