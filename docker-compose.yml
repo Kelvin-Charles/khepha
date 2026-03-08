@@ -16,7 +16,7 @@ services:
     restart: always
 
   db:
-    image: mysql:8.0
+    image: mariadb:10.11
     container_name: oit237_db
     environment:
       - MYSQL_ROOT_PASSWORD=rootpassword
