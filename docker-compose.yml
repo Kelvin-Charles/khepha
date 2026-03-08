@@ -15,6 +15,7 @@ services:
     networks:
       - default
       - reverse-proxy-server_default
+      - gateway
 
   db:
     image: mariadb:10.11
@@ -36,4 +37,6 @@ volumes:
 
 networks:
   reverse-proxy-server_default:
+    external: true
+  gateway:
     external: true
