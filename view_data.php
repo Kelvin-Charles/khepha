@@ -37,66 +37,46 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retrieve Information (Admin Panel)</title>
+    <title>Admin Panel - Vivian Khepha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .login-form {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #f4f4f4;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            text-align: center;
-        }
-        .login-form input[type="password"] {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .login-form button {
-            padding: 10px 20px;
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
 
-    <header>
-        <h1 style="text-align: center;">Database Records</h1>
+    <header class="hero" style="padding: 36px 32px;">
+        <div class="hero-content">
+            <h1 style="font-size: 2rem;">Database Records</h1>
+        </div>
     </header>
 
-    <nav style="text-align: center; margin-bottom: 20px;">
-        <a href="index.html">Back to Home</a> |
-        <a href="form.php">Submit Feedback Form</a>
+    <nav class="nav-bar">
+        <a href="index.html">Back to Home</a>
+        <a href="form.php">Submit Feedback</a>
         <?php if ($logged_in): ?>
-            | <a href="view_data.php?logout=1">Logout</a>
+            <a href="view_data.php?logout=1">Logout</a>
         <?php endif; ?>
     </nav>
 
     <main>
         <?php if (!$logged_in): ?>
-            <!-- Login Form to access data -->
-            <div class="login-form">
-                <h3>Admin Login Required</h3>
-                <p>Please enter the password to view database records.</p>
-                <p style="color: red;"><?php echo $error_msg; ?></p>
-                <form action="view_data.php" method="POST">
-                    <input type="password" name="password" placeholder="Enter Password" required>
-                    <br>
-                    <button type="submit" name="login">Login</button>
-                </form>
-            </div>
+            <section class="section card">
+                <div class="login-form">
+                    <h3>Admin Login Required</h3>
+                    <p>Please enter the password to view database records.</p>
+                    <?php if ($error_msg): ?><p class="error-msg"><?php echo $error_msg; ?></p><?php endif; ?>
+                    <form action="view_data.php" method="POST">
+                        <input type="password" name="password" placeholder="Enter Password" required>
+                        <button type="submit" name="login">Login</button>
+                    </form>
+                </div>
+            </section>
             
         <?php else: ?>
-            <!-- Display Data -->
-            <h2>Submitted Feedback</h2>
+            <section class="section card">
+                <h2>Submitted Feedback</h2>
+                <div class="table-wrap data-table-wrap">
             
             <?php
             // Connect to database
@@ -128,6 +108,8 @@ if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
                 $conn->close();
             }
             ?>
+                </div>
+            </section>
         <?php endif; ?>
     </main>
 

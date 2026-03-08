@@ -3,81 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
+    <title>Contact Form - Vivian Khepha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .form-container {
-            max-width: 500px;
-            margin: 0 auto;
-            background: #f4f4f4;
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #3498db;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #2980b9;
-        }
-    </style>
 </head>
 <body>
 
-    <header>
-        <h1 style="text-align: center; font-size: 2.5em; margin-bottom: 5px;">Student Feedback Form</h1>
+    <header class="hero" style="padding: 36px 32px;">
+        <div class="hero-content">
+            <h1 style="font-size: 2.2rem;">Student Feedback Form</h1>
+        </div>
     </header>
 
-    <nav style="text-align: center; margin-bottom: 20px;">
-        <a href="index.html">Back to Home</a> |
+    <nav class="nav-bar">
+        <a href="index.html">Back to Home</a>
         <a href="view_data.php">Admin Login (View Data)</a>
     </nav>
 
     <main>
-        <h2>Submit Your Details</h2>
-        <p>Please fill out the form below. Your information will be securely stored in our database.</p>
-        
-        <div class="form-container">
-            <form action="process.php" method="POST">
-                <div class="form-group">
-                    <label for="full_name">Full Name:</label>
-                    <input type="text" id="full_name" name="full_name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Feedback / Message:</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                
-                <button type="submit" name="submit">Submit Information</button>
-            </form>
-        </div>
+        <section class="section card">
+            <h2>Submit Your Details</h2>
+            <p>Please fill out the form below. Your information will be securely stored in our database.</p>
+            
+            <div class="form-container">
+                <form action="process.php" method="POST">
+                    <div class="form-group">
+                        <label for="full_name">Full Name</label>
+                        <input type="text" id="full_name" name="full_name" required placeholder="Your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Feedback / Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Share your feedback..."></textarea>
+                    </div>
+                    
+                    <button type="submit" name="submit">Submit Information</button>
+                </form>
+            </div>
+        </section>
     </main>
 
 </body>

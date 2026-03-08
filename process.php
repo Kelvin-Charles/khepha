@@ -43,22 +43,29 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processing Data</title>
+    <title>Submission Result - Vivian Khepha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1 style="text-align: center;">Submission Result</h1>
+    <header class="hero" style="padding: 36px 32px;">
+        <div class="hero-content">
+            <h1 style="font-size: 2rem;">Submission Result</h1>
+        </div>
     </header>
     
-    <nav style="text-align: center; margin-bottom: 20px;">
-        <a href="index.html">Back to Home</a> |
-        <a href="form.php">Submit Another Feedback</a> |
+    <nav class="nav-bar">
+        <a href="index.html">Back to Home</a>
+        <a href="form.php">Submit Another</a>
         <a href="view_data.php">View Data</a>
     </nav>
     
-    <main style="text-align: center;">
-        <h2 style="color: <?php echo $status_color; ?>;"><?php echo $status_msg; ?></h2>
+    <main>
+        <section class="section card" style="text-align: center;">
+            <h2 style="color: <?php echo $status_color; ?>; border: none; margin: 0;"><?php echo $status_msg; ?></h2>
+        </section>
     </main>
 </body>
 </html>
