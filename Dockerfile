@@ -1,6 +1,9 @@
 # Use the official PHP image with Apache
 FROM php:8.1-apache
 
+# Suppress the ServerName warning
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
 # Install the mysqli extension
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
