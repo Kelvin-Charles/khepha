@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivian Khepha - Personal Homepage</title>
+    <!-- Linked external style sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Name prominently centered at the top -->
+    <header>
+        <h1 style="text-align: center; font-size: 3em; margin-bottom: 5px;">Vivian Khepha</h1>
+        <p style="text-align: center; margin-top: 0; font-style: italic;">OIT 237 Web Programming - Assignment 1 & 2</p>
+    </header>
+
+    <!-- Navigation (Internal links) -->
+    <nav style="text-align: center; margin-bottom: 20px;">
+        <a href="#personal-info">Personal Info</a> |
+        <a href="#hobbies">Hobbies</a> |
+        <a href="#favorite-links">Favorite Links</a> |
+        <a href="form.php">Contact / Feedback Form</a>
+    </nav>
+
+    <main>
+        <!-- Part 1: Personal Info section with multiple paragraphs -->
+        <section id="personal-info">
+            <h2>Personal Info</h2>
+            
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img" style="float: left; margin-right: 15px; border: 2px solid #ccc;">
+
+            <p>Welcome to my personal homepage! My name is <b>Vivian Khepha</b>, and I am a passionate student currently enrolled at the Open University of Tanzania. I enjoy learning about new technologies, specifically in the realm of web development and software engineering. I believe that creating web applications is not just about writing code, but about solving real-world problems and creating experiences that people love to use.</p>
+            
+            <p>I was born and raised in <span style="color: darkblue;">Tanzania</span>, a beautiful country with rich culture and amazing landscapes. In my academic journey, I strive to achieve excellence and continuously improve my skill set. This website serves as a central repository for the web-based applications I am developing throughout my coursework.</p>
+
+            <div style="clear: both;"></div>
+
+            <!-- Quote section -->
+            <div style="background-color: #f4f4f4; padding: 15px; margin-top: 20px; border-left: 5px solid #333;">
+                <i>"The only way to do great work is to love what you do."</i> - Steve Jobs
+            </div>
+        </section>
+
+        <!-- Part 2: Hobbies section with a list -->
+        <section id="hobbies">
+            <h2>Hobbies & Interests</h2>
+            <p>When I am not studying or coding, I enjoy engaging in various activities that help me relax and stay inspired. Here is a list of my top favorite things to do:</p>
+            <ul>
+                <li>Reading technology blogs and articles online.</li>
+                <li>Listening to my top favorite music albums and coding playlists.</li>
+                <li>Watching sci-fi movies and documentaries about space.</li>
+                <li>Exploring different parts of the city and taking photographs.</li>
+            </ul>
+            
+            <!-- Table requirement -->
+            <h3>My Weekly Schedule</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Activity</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Attending OIT 237 Web Programming lectures, <br>working on coding assignments, <br>and reviewing class notes.</td>
+                        <td>University Campus / Home</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Group discussions, database management practice, <br>and reading advanced HTML5/CSS3 topics.</td>
+                        <td>Library</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Rest day, engaging in hobbies, <br>watching movies, and spending time with family.</td>
+                        <td>Home</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Part 3: Favorite Links section -->
+        <section id="favorite-links">
+            <h2>Favorite Links</h2>
+            <p>Here are some of the external resources and websites that I frequently visit:</p>
+            <ol>
+                <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> - Great for learning web development basics.</li>
+                <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a> - Comprehensive documentation for web standards.</li>
+                <li><a href="https://github.com/" target="_blank">GitHub</a> - Where I explore open source projects.</li>
+                <li><a href="https://www.out.ac.tz/" target="_blank">Open University of Tanzania</a> - My university's main portal for announcements and student services.</li>
+                <li>For all matters regarding my specific field of study, I regularly check the <a href="https://www.out.ac.tz/faculty-of-science-technology-and-environmental-studies/" target="_blank">ICT department home page</a> to stay updated with the latest news.</li>
+            </ol>
+            
+            <!-- Second image (External image) -->
+            <div style="text-align: center; margin-top: 20px;">
+                <p><i>A beautiful landscape representing nature:</i></p>
+                <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Beautiful landscape" style="max-width: 100%; border-radius: 8px;">
+            </div>
+        </section>
+    </main>
+
+    <!-- Part 3: Location and last modification date displayed using JavaScript -->
+    <footer>
+        <hr>
+        <p>This page is hosted at: <span id="page-location" style="font-weight: bold;"></span></p>
+        <p>Last modified: <span id="last-modified" style="color: #c0392b;"></span></p>
+        
+        <script>
+            // Automatically display page location
+            document.getElementById('page-location').innerText = window.location.href;
+            
+            // Automatically display last modification date
+            document.getElementById('last-modified').innerText = document.lastModified;
+        </script>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+ONLINE HOSTED WEBSITE LINK
+========================================
+
+Student Name: Vivian Khepha
+Course: OIT 237 Web Programming
+
+To fulfill PART 6 of the assignment, the website is being hosted via Docker on the Safezone Tech server.
+
+========================================
+MY WEBSITE LINK:
+
+https://viviankhepha.beetletz.online
+========================================
