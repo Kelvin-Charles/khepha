@@ -41,7 +41,7 @@ CREATE TABLE `feedback` (
 --
 
 INSERT INTO `feedback` (`id`, `full_name`, `email`, `message`, `created_at`) VALUES
-(1, 'Vivian Khepha', 'vivian.khepha@example.com', 'This is a test message to ensure the database insertion works correctly for the OIT 237 Web Programming assignment.', '2026-03-04 10:00:00');
+(1, 'Vivian Kepha', 'vivian.Kepha@example.com', 'This is a test message to ensure the database insertion works correctly for the OIT 237 Web Programming assignment.', '2026-03-04 10:00:00');
 
 --
 -- Indexes for dumped tables
